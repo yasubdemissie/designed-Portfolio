@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Linkedin, Send, Instagram } from "lucide-react";
+import { ContactButton } from "./supporters/contactButton";
 
 export default function CombinedPortfolio() {
   return (
@@ -46,10 +47,7 @@ export default function CombinedPortfolio() {
 
           {/* Right Content */}
           <div className="flex-1 flex justify-center mr-10 mt-auto">
-            <Button className="bg-custom-accent-dark w-3/4 hover:bg-custom-accent-light text-white px-16 py-6 rounded-full text-lg font-medium flex items-center gap-3">
-              <ArrowRight className=" w-fit p-3 rounded-full bg-white text-black text-md" />
-              Get In Touch
-            </Button>
+            <ContactButton />
           </div>
         </main>
 
