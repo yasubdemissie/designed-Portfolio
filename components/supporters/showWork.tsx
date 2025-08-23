@@ -12,16 +12,18 @@ export function ShowWork({
   imagePath: string;
 }) {
   return (
-    <div className="flex items-center gap-16 my-7">
+    <div className="flex flex-col md:flex-row h-[406] md:h-fit items-center gap-2 md:gap-16 my-20">
       {/* Left Content */}
-      <div className="flex-1 max-w-lg">
-        <h2 className="text-4xl font-light text-gray-900 mb-6">{title}</h2>
+      <div className="flex-1 max-w-lg order-2 md:order-1">
+        <h2 className="text-[20px] md:text-4xl font-semibold text-gray-900 mb-2 md:mb-6">
+          {title}
+        </h2>
 
-        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+        <p className="text-gray-600 md:text-lg text-[12px] leading-relaxed mb-2 md:mb-8">
           {description}
         </p>
 
-        <div className="flex gap-4">
+        <div className="flex justify-around gap-4">
           <Button
             variant="outline"
             className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg flex items-center gap-2 bg-transparent"
@@ -29,7 +31,7 @@ export function ShowWork({
             Case study
             <ArrowRight className="w-4 h-4" />
           </Button>
-          <Button className="bg-purple-700 hover:bg-purple-800 text-white px-6 py-3 rounded-lg flex items-center gap-2">
+          <Button className="bg-custom-accent-dark hover:bg-custom-accent-dark/20 text-white px-6 py-3 rounded-lg flex items-center gap-2">
             Mockup
             <ArrowRight className="w-4 h-4" />
           </Button>
@@ -37,8 +39,8 @@ export function ShowWork({
       </div>
 
       {/* Right Content - Green Background with Mobile Mockups */}
-      <div className="flex-1 relative">
-        <div className="bg-green-600 rounded-2xl p-12 min-h-[500px] relative overflow-hidden group cursor-pointer transition-all duration-300">
+      <div className="flex-1 relative order-1 md:order-2 mb-3">
+        <div className="bg-green-600 rounded-2xl p-12 w-[380px] h-[267px] md:min-h-[500px] relative overflow-hidden group cursor-pointer transition-all duration-300">
           <Image
             src={`/assets/image/${imagePath}`}
             alt="E-commerce app mockup"

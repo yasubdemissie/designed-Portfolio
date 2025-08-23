@@ -7,7 +7,7 @@ export default function TitleShow({ title }: { title: string }) {
           return (
             <span
               key={index}
-              className="w-12 h-12 bg-custom-accent-dark flex items-center justify-center text-white font-bold text-lg transform -rotate-4 origin-center"
+              className="w-8 md:w-12 h-8 md:h-12 bg-custom-accent-dark flex items-center justify-center text-white font-semibold md:font-bold text-[24px] md:text-lg transform -rotate-4 origin-center"
             >
               {letter}
             </span>
@@ -15,7 +15,7 @@ export default function TitleShow({ title }: { title: string }) {
         return (
           <span
             key={index}
-            className="w-12 h-12 bg-custom-accent-light flex items-center justify-center text-white font-bold text-lg transform -rotate-4 origin-center"
+            className="w-8 md:w-12 h-8 md:h-12 bg-custom-accent-light flex items-center justify-center text-white font-semibold md:font-bold text-[24px] md:text-lg transform -rotate-4 origin-center"
           >
             {letter}
           </span>

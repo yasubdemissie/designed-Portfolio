@@ -25,15 +25,20 @@ const works = [
 
 export default function WorkPage() {
   return (
-    <div id="works" className="min-h-screen bg-brand-main relative top-5 overflow-hidden">
+    <div
+      id="works"
+      className="min-h-screen bg-brand-main relative top-5 overflow-hidden"
+    >
       {/* Main Content */}
-      <main className="px-8 py-16">
+      <main className="px-2 md:px-8 py-16">
         {/* WORKS Title */}
         <TitleShow title="WORKS" />
 
         {/* Some Design Works */}
         <div className="text-right mb-8">
-          <p className="text-gray-600 text-lg">Some Design Works</p>
+          <p className="text-gray-600 text-sm md:text-md lg:text-lg">
+            Some Design Works
+          </p>
         </div>
 
         {/* Project Showcase */}

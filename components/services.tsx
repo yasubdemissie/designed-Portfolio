@@ -31,29 +31,21 @@ export default function Services() {
         onMouseLeave={() => setHoveredService(null)}
       >
         {/* Services Grid Container */}
-        <div className="grid grid-cols-5 h-full relative">
+        <div className="grid grid-cols-1 md:grid-cols-5 h-full relative">
           {/* Web and Mobile App Design */}
           <div
             className="bg-custom-accent-dark flex items-center justify-center p-8 cursor-pointer transition-all duration-300"
             onMouseEnter={() => setHoveredService("web-mobile")}
           >
             <h3 className="text-white text-2xl font-light text-center leading-tight">
-              Web and
-              <br />
-              Mobile
-              <br />
-              App
-              <br />
-              Design
+              Web and Mobile App Design
             </h3>
           </div>
 
           {/* UI/UX Design */}
           <div className="bg-custom-accent-light flex items-center justify-center p-8">
             <h3 className="text-white text-2xl font-light text-center leading-tight">
-              UI/UX
-              <br />
-              Design
+              UI/UX Design
             </h3>
           </div>
 
@@ -63,20 +55,14 @@ export default function Services() {
             onMouseEnter={() => setHoveredService("ux-research")}
           >
             <h3 className="text-white text-2xl font-light text-center leading-tight">
-              UX
-              <br />
-              Research
+              UX Research
             </h3>
           </div>
 
           {/* Brand Identity Design */}
           <div className="bg-[#5c0066] flex items-center justify-center p-8">
             <h3 className="text-white text-2xl font-light text-center leading-tight">
-              Brand
-              <br />
-              Identity
-              <br />
-              Design
+              Brand Identity Design
             </h3>
           </div>
 
