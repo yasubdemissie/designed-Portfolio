@@ -1,27 +1,26 @@
-import TitleShow from "@/public/assets/image/titleShow";
+import TitleShow from "@/components/supporters/titleShow";
 import { ShowWork } from "./supporters/showWork";
+import { userData } from "@/data/db";
 
-const works = [
-  {
-    title: "E-commerce app",
-    description:
-      "I led the complete design lifecycle, from initial concept through to execution, encompassing responsive design, UI, and UX. This included key components like the login, navigation, and administrative pages.",
-    imagePath: "e-commerce.png",
-  },
-  {
-    title: "Ride Responsive App",
-    description:
-      "Created a user-friendly ride-sharing application, focusing on security and ease of use. Implemented features like real-time tracking, ride history, and user profiles.",
-    imagePath: "ride.png",
-  },
-  {
-    title: "Addis Ababa University",
-    description:
-      "Designed a responsive dashboard for a social media platform, focusing on user engagement and analytics. Implemented features like real-time notifications and user activity tracking.",
-    imagePath: "AAU.png",
-  },
-  // Add more work items here
-];
+const works = userData[0].works;
+
+//       "I led the complete design lifecycle, from initial concept through to execution, encompassing responsive design, UI, and UX. This included key components like the login, navigation, and administrative pages.",
+//     imagePath: "e-commerce.png",
+//   },
+//   {
+//     title: "Ride Responsive App",
+//     description:
+//       "Created a user-friendly ride-sharing application, focusing on security and ease of use. Implemented features like real-time tracking, ride history, and user profiles.",
+//     imagePath: "ride.png",
+//   },
+//   {
+//     title: "Addis Ababa University",
+//     description:
+//       "Designed a responsive dashboard for a social media platform, focusing on user engagement and analytics. Implemented features like real-time notifications and user activity tracking.",
+//     imagePath: "AAU.png",
+//   },
+//   // Add more work items here
+// ];
 
 export default function WorkPage() {
   return (
@@ -47,7 +46,9 @@ export default function WorkPage() {
             key={work.title}
             title={work.title}
             description={work.description}
-            imagePath={work.imagePath}
+            image={work.image}
+            link={work.link}
+            svgs={work.svgs}
           />
         ))}
       </main>

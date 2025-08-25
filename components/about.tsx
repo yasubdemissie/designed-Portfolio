@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { ContactButton } from "./supporters/contactButton";
 
 export default function AboutPage() {
   return (
@@ -61,7 +62,7 @@ export default function AboutPage() {
 
         {/* Main paragraph */}
         <div className="text-center mb-12">
-          <p className="text-2xl md:text-3xl md:font-semibold font-light text-brand-text leading-relaxed">
+          <p className="text-xl md:text-3xl font-semibold md:font-bold text-brand-text leading-relaxed">
             If you have a challenge that needs a user-centered solution,
             I&apos;d love to discuss how my expertise can contribute to your
             success. I create seamless digital experiences that users love,
@@ -70,10 +71,7 @@ export default function AboutPage() {
         </div>
 
         {/* Get In Touch button */}
-        <Button className="bg-custom-accent-dark hover:bg-custom-accent-light text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-3 transition-all duration-200">
-          <ArrowRight className="w-5 h-5" />
-          Get In Touch
-        </Button>
+        <ContactButton />
       </div>
     </div>
   );

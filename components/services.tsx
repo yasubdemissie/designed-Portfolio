@@ -1,6 +1,6 @@
 "use client";
 
-import TitleShow from "@/public/assets/image/titleShow";
+import TitleShow from "@/components/supporters/titleShow";
 import { useState } from "react";
 
 export default function Services() {

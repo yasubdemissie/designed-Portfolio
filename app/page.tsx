@@ -15,9 +15,9 @@ export default function Home() {
       <MovingNews />
       <WorkPage />
       <Services />
-      {/* <AboutIntro />
+      <AboutIntro />
       <AboutPage />
-      <Contact /> */}
+      <Contact />
     </div>
   );
 }
