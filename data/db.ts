@@ -9,12 +9,18 @@ export interface Contact {
   instagram?: string;
   facebook?: string;
   youtube?: string;
+  website?: string;
 }
 export interface User {
   name: string;
   image: string;
   contact: Contact;
-  job: "Developer" | "Designer";
+  description: string;
+  job:
+    | "Full Stack Web Developer"
+    | "Front-End Developer"
+    | "Back-End Developer"
+    | "Digital Product Designer";
 }
 
 export interface Work {
@@ -34,13 +40,16 @@ export const userData: Data[] = [
   {
     user: {
       name: "Nahom Dibaba",
+      description:
+        "I'm a UI/UX Designer driven by a genuine passion for solving complex user problems with elegant, intuitive solutions. My approach is rooted in deep user research and data-driven insights, which allows me to craft digital experiences that not only look great but also deliver measurable impact.",
       contact: {
-        phone: 1234567890,
+        phone: 993448399,
         email: "nahom.dibaba@gmail.com",
         location: "Shashemane, Ethiopia",
+        website: "nahomdibaba.dev",
       },
-      image: "/assets/image/users/nahom-dibaba.jpg",
-      job: "Designer",
+      image: "/assets/image/user/user.jpg",
+      job: "Digital Product Designer",
     } as User,
     works: [
       {
@@ -52,6 +61,7 @@ export const userData: Data[] = [
         svgs: [
           "/assets/image/ride/rideDetailMobile.svg",
           "/assets/image/ride/rideDetailPc.svg",
+          "/assets/image/ride/rideCaseStudy.svg",
         ],
       } as Work,
       {
@@ -60,17 +70,21 @@ export const userData: Data[] = [
           "I led the complete design lifecycle, from initial concept through to execution, encompassing responsive design, UI, and UX. This included key components like the login, navigation, and administrative pages.",
         image: "/assets/image/e-commerce/e-commerce.png",
         link: "e-commerce-app-demo",
-        svgs: ["/assets/image/e-commerce/e-commerceDetail.svg"],
+        svgs: [
+          "/assets/image/e-commerce/e-commerceDetail.svg",
+          "/assets/image/ride/e-commerceCaseStudy.svg",
+        ],
       } as Work,
       {
         title: "Addis Ababa University App",
         description:
           "Designed a responsive dashboard for a social media platform, focusing on user engagement and analytics. Implemented features like real-time notifications and user activity tracking.",
-        image: "/assets/image/AAU/AAU.png",
-        link: "Addis-Ababa-University-App-demo",
+        image: "/assets/image/ASTU/ASTU.png",
+        link: "Adama-Science-and-Technology-University-App-demo",
         svgs: [
-          "/assets/image/AAU/AAUDetailMobile.svg",
-          "/assets/image/AAU/AAUDetailPc.svg",
+          "/assets/image/ASTU/ASTUDetailMobile.svg",
+          "/assets/image/ASTU/ASTUDetailPc.svg",
+          "/assets/image/ride/CaseStudy.svg",
         ],
       } as Work,
     ],

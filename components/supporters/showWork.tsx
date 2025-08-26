@@ -23,12 +23,15 @@ export function ShowWork({ title, description, image, link }: Work) {
         <div className="flex justify-around gap-4">
           <Button
             variant="outline"
-            className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg flex items-center gap-2 bg-transparent"
+            className="border-gray-700 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg flex items-center gap-2 bg-transparent"
           >
             Case study
             <ArrowRight className="w-4 h-4" />
           </Button>
-          <Button className="bg-custom-accent-dark hover:bg-custom-accent-dark/20 text-white px-6 py-3 rounded-lg flex items-center gap-2">
+          <Button
+            onClick={() => navigate.push(`${link}`)}
+            className="bg-custom-accent-dark hover:bg-custom-accent-dark/80 text-white px-6 py-3 rounded-lg flex items-center gap-2"
+          >
             Mockup
             <ArrowRight className="w-4 h-4" />
           </Button>
@@ -41,8 +44,8 @@ export function ShowWork({ title, description, image, link }: Work) {
           <Image
             src={image}
             alt="E-commerce app mockup"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
           <div
             onClick={() => navigate.push(`${link}`)}

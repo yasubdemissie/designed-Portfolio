@@ -1,7 +1,10 @@
 import { Linkedin, Send, Instagram } from "lucide-react";
 import { ContactButton } from "./supporters/contactButton";
+import { userData } from "@/data/db";
 
 export default function CombinedPortfolio() {
+  const user = userData[0].user;
+
   return (
     <div className="bg-brand-main">
       {/* Home Section */}
@@ -15,8 +18,8 @@ export default function CombinedPortfolio() {
           <div className="flex-shrink-0 mb-8 md:mb-0 md:mx-16 order-1 md:order-2">
             <div className="w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden bg-black">
               <img
-                src="assets/image/user.jpg"
-                alt="Nahom Dibaba"
+                src={user.image || "/assets/image/user/user.png"}
+                alt={user.name || "USER"}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -58,7 +61,7 @@ export default function CombinedPortfolio() {
             className="writing-mode-vertical text-brand-text/70 text-sm tracking-wider"
             style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
           >
-            nahom.dibaba@gmail.com
+            {user.contact.email}
           </div>
 
           <div className="flex flex-col gap-4">
