@@ -28,13 +28,16 @@ export function EmailOverlay({ isOpen, onClose }: EmailOverlayProps) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mblajnlj", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `https://formspree.io/f/${process.env.FORMSPREE_FORM_ID}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         setIsSubmitted(true);
