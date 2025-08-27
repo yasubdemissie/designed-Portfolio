@@ -1,10 +1,11 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowRightToLine } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { Work } from "@/data/db";
+import { CaseStudyButton } from "./caseStudyButton";
 
 export function ShowWork({ title, description, image, link }: Work) {
   const navigate = useRouter();
@@ -21,13 +22,7 @@ export function ShowWork({ title, description, image, link }: Work) {
         </p>
 
         <div className="flex justify-around gap-4">
-          <Button
-            variant="outline"
-            className="border-gray-700 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg flex items-center gap-2 bg-transparent"
-          >
-            Case study
-            <ArrowRight className="w-4 h-4" />
-          </Button>
+          <CaseStudyButton />
           <Button
             onClick={() => navigate.push(`${link}`)}
             className="bg-custom-accent-dark hover:bg-custom-accent-dark/80 text-white px-6 py-3 rounded-lg flex items-center gap-2"
@@ -49,9 +44,15 @@ export function ShowWork({ title, description, image, link }: Work) {
           />
           <div
             onClick={() => navigate.push(`${link}`)}
-            className="absolute inset-0 bg-black/50 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            className="absolute inset-0 bg-black/50 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-y-1"
           >
-            <span className="text-white text-2xl font-medium">See more</span>
+            <div className="w-fit p-2 rounded-full my-1 bg-black/40">
+              <ArrowRightToLine color="white" />
+            </div>
+            <h3 className="text-white text-2xl font-medium">See more</h3>
+            <p className="text-white text-sm">
+              View the full mocukup and case study
+            </p>
           </div>
         </div>
       </div>

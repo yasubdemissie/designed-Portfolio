@@ -22,6 +22,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         contact:
           "bg-custom-accent-dark text-white hover:bg-custom-accent-dark/90 rounded-4xl",
+        email:
+          "absolute top-4 right-4 p-2 rounded-full hover:bg-black/10 transition-colors duration-200",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

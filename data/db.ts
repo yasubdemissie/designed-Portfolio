@@ -29,6 +29,7 @@ export interface Work {
   image: string;
   link: string;
   svgs: string[];
+  caseStudy: string[];
 }
 
 export interface Data {
@@ -61,7 +62,10 @@ export const userData: Data[] = [
         svgs: [
           "/assets/image/ride/rideDetailMobile.svg",
           "/assets/image/ride/rideDetailPc.svg",
-          "/assets/image/ride/rideCaseStudy.svg",
+        ],
+        caseStudy: [
+          "/assets/image/ride/rideUpperCS.png",
+          "/assets/image/ride/rideLowerCS.png",
         ],
       } as Work,
       {
@@ -70,9 +74,10 @@ export const userData: Data[] = [
           "I led the complete design lifecycle, from initial concept through to execution, encompassing responsive design, UI, and UX. This included key components like the login, navigation, and administrative pages.",
         image: "/assets/image/e-commerce/e-commerce.png",
         link: "e-commerce-app-demo",
-        svgs: [
-          "/assets/image/e-commerce/e-commerceDetail.svg",
-          "/assets/image/ride/e-commerceCaseStudy.svg",
+        svgs: ["/assets/image/e-commerce/e-commerceDetail.svg"],
+        caseStudy: [
+          "/assets/image/e-commerce/e-commerceUpperCS.png",
+          "/assets/image/e-commerce/e-commerceLowerCS.png",
         ],
       } as Work,
       {
@@ -84,7 +89,10 @@ export const userData: Data[] = [
         svgs: [
           "/assets/image/ASTU/ASTUDetailMobile.svg",
           "/assets/image/ASTU/ASTUDetailPc.svg",
-          "/assets/image/ride/CaseStudy.svg",
+        ],
+        caseStudy: [
+          "/assets/image/ASTU/ASTUUpperCS.png",
+          "/assets/image/ASTU/ASTULowerCS.png",
         ],
       } as Work,
     ],
