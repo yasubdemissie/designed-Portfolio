@@ -12,7 +12,7 @@ export function CaseStudyButton({ path }: { path?: string }) {
           ? navigate.push(`${path}?tab=case-study`)
           : navigate.push("?tab=case-study")
       }
-      className="bg-brand-main border border-gray-300 hover:bg-brand-main/80 text-white px-6 py-3 rounded-lg flex items-center gap-2"
+      className="bg-brand-main border border-gray-300 hover:bg-brand-main/80 text-black px-6 py-3 rounded-lg flex items-center gap-2"
     >
       Case Study
     </Button>

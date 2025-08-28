@@ -10,7 +10,7 @@ export function Mockup({ slug }: { slug: string }) {
   const isTwoMockups = work?.svgs.length === 2;
   console.log(works, slug);
   return (
-    <div className="w-full h-fit flex justify-center items-center flex-col bg-brand-second">
+    <div className="w-full h-fit flex justify-center items-center flex-col bg-brand-second m-1">
       {/* Works {works} */}
       <div className="flex justify-between w-full fixed top-4 px-12 my-6">
         <BackButton />

@@ -9,7 +9,7 @@ export function CaseStudy({ slug }: { slug: string }) {
   if (!work) return null;
   const image = work.caseStudy;
   return (
-    <div className="flex flex-col bg-brand-main">
+    <div className="flex flex-col bg-brand-main m-1">
       <div className="w-fit pl-3 fixed top-4 flex justify-around h-16 bg-brand-second">
         <BackButton />
       </div>
