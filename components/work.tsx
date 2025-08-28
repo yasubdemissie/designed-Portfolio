@@ -6,10 +6,7 @@ const works = userData[0].works;
 
 export default function WorkPage() {
   return (
-    <section
-      id="works"
-      className="min-h-screen bg-brand-main relative top-5"
-    >
+    <section id="works" className="min-h-screen bg-brand-main relative top-5">
       <TitleShow title="WORKS" />
       {/* Main Content */}
       <main className="px-2 md:px-8 py-16">
@@ -31,6 +28,7 @@ export default function WorkPage() {
             image={work.image}
             link={work.link}
             svgs={work.svgs}
+            caseStudy={work.caseStudy}
           />
         ))}
       </main>

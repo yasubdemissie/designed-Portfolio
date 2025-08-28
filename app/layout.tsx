@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-// import { Urbanist } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 
 // const urbanistSans = Urbanist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
 // });
+
+const UrbanistFont = Urbanist({
+  weight: "variable",
+  // variable: "--font-geist",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased bg-accent-dark`}>
+      <body className={`${UrbanistFont.className} antialiased bg-accent-dark`}>
         {/* ${urbanistSans.variable} */}
         {children}
       </body>

@@ -17,7 +17,74 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
+import { userData } from "@/data/db";
 // EmailJS will be imported after installation
+const { user } = userData[0];
+
+const SocialLinks = [
+  {
+    icon: Github,
+    href: user.contact.github || "#",
+    label: "GitHub",
+    bgColor: "bg-slate-100 dark:bg-slate-800",
+    iconColor: "text-slate-600 dark:text-slate-400",
+  },
+  {
+    icon: Linkedin,
+    href: user.contact.linkedIn || "#",
+    label: "LinkedIn",
+    bgColor: "bg-blue-100 dark:bg-blue-800",
+    iconColor: "text-blue-600 dark:text-blue-400",
+  },
+  {
+    icon: Mail,
+    href: `mailto:${user.contact.email}`,
+    label: "Email",
+    bgColor: "bg-red-100 dark:bg-red-800",
+    iconColor: "text-red-600 dark:text-red-400",
+  },
+];
+
+const Data = [
+  {
+    icon: Phone,
+    label: "Phone",
+    value: `+251 ${user.contact.phone}`,
+    href: `tel:${user.contact.phone}`,
+    bgColor: "bg-violet-100 dark:bg-violet-900/30",
+    iconColor: "text-violet-600 dark:text-violet-400",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: user.contact.email,
+    href: `mailto:${user.contact.email}`,
+    bgColor: "bg-sky-100 dark:bg-sky-900/30",
+    iconColor: "text-sky-600 dark:text-sky-400",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: user.contact.location,
+    bgColor: "bg-rose-100 dark:bg-rose-900/30",
+    iconColor: "text-rose-600 dark:text-rose-400",
+  },
+  {
+    icon: Clock,
+    label: "Availability",
+    value: "Open to freelance & full-time · Responds within 24 hours",
+    bgColor: "bg-amber-100 dark:bg-amber-900/30",
+    iconColor: "text-amber-600 dark:text-amber-400",
+  },
+  {
+    icon: Globe,
+    label: "Website",
+    value: user.contact.website,
+    href: user.contact.website || "#",
+    bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
+    iconColor: "text-emerald-600 dark:text-emerald-400",
+  },
+];
 
 export default function Contact() {
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -49,18 +116,21 @@ export default function Contact() {
 
     try {
       // Option 1: Formspree (free service)
-      const response = await fetch("https://formspree.io/f/mkgzybpy", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          _subject: `New Contact from ${formData.name}`,
-        }),
-      });
+      const response = await fetch(
+        `https://formspree.io/f/${process.env.FORMSPREE_FORM_ID}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            _subject: `New Contact from ${formData.name}`,
+          }),
+        }
+      );
 
       if (response.ok) {
         setSubmitStatus({
@@ -89,9 +159,6 @@ export default function Contact() {
       className="relative py-32 transition-all duration-700 overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden">
-        {/* <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-teal-400/20 to-blue-600/20 rounded-full blur-3xl animate-pulse delay-1000" /> */}
-
         {/* Floating sparkles */}
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -155,51 +222,13 @@ export default function Contact() {
                 <motion.h3
                   className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-2"
                   whileHover={{ scale: 1.02 }}
-                >                  Contact Details
+                >
+                  {" "}
+                  Contact Details
                 </motion.h3>
 
                 <ul className="space-y-6 text-gray-700 dark:text-gray-300">
-                  {[
-                    {
-                      icon: Phone,
-                      label: "Phone",
-                      value: "+251 938 177 141",
-                      href: "tel:+251938177141",
-                      bgColor: "bg-violet-100 dark:bg-violet-900/30",
-                      iconColor: "text-violet-600 dark:text-violet-400",
-                    },
-                    {
-                      icon: Mail,
-                      label: "Email",
-                      value: "yasdam@gmail.com",
-                      href: "mailto:yasdam@gmail.com",
-                      bgColor: "bg-sky-100 dark:bg-sky-900/30",
-                      iconColor: "text-sky-600 dark:text-sky-400",
-                    },
-                    {
-                      icon: MapPin,
-                      label: "Location",
-                      value: "Addis Ababa, Ethiopia",
-                      bgColor: "bg-rose-100 dark:bg-rose-900/30",
-                      iconColor: "text-rose-600 dark:text-rose-400",
-                    },
-                    {
-                      icon: Clock,
-                      label: "Availability",
-                      value:
-                        "Open to freelance & full-time · Responds within 24 hours",
-                      bgColor: "bg-amber-100 dark:bg-amber-900/30",
-                      iconColor: "text-amber-600 dark:text-amber-400",
-                    },
-                    {
-                      icon: Globe,
-                      label: "Website",
-                      value: "yasubdemissie.dev",
-                      href: "#",
-                      bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
-                      iconColor: "text-emerald-600 dark:text-emerald-400",
-                    },
-                  ].map((item, index) => (
+                  {Data.map((item, index) => (
                     <motion.li
                       key={item.label}
                       className="flex items-start gap-4 group/item"
@@ -250,29 +279,7 @@ export default function Contact() {
                     Connect With Me
                   </div>
                   <div className="flex gap-3">
-                    {[
-                      {
-                        icon: Github,
-                        href: "#",
-                        label: "GitHub",
-                        bgColor: "bg-slate-100 dark:bg-slate-800",
-                        iconColor: "text-slate-600 dark:text-slate-400",
-                      },
-                      {
-                        icon: Linkedin,
-                        href: "#",
-                        label: "LinkedIn",
-                        bgColor: "bg-blue-100 dark:bg-blue-800",
-                        iconColor: "text-blue-600 dark:text-blue-400",
-                      },
-                      {
-                        icon: Mail,
-                        href: "mailto:yasdam@gmail.com",
-                        label: "Email",
-                        bgColor: "bg-red-100 dark:bg-red-800",
-                        iconColor: "text-red-600 dark:text-red-400",
-                      },
-                    ].map((social) => (
+                    {SocialLinks.map((social) => (
                       <motion.a
                         key={social.label}
                         href={social.href}
@@ -298,15 +305,6 @@ export default function Contact() {
           </motion.aside>
 
           <div className="md:col-span-3">
-            {/* 
-              SETUP INSTRUCTIONS:
-              1. Go to https://formspree.io and create a free account
-              2. Create a new form and get your form ID
-              3. Replace "YOUR_FORM_ID" in the handleSubmit function with your actual form ID
-              4. The form will automatically send emails to your registered email address
-              
-              Alternative: You can also use Netlify Forms, EmailJS, or create your own API endpoint
-            */}
             <motion.form
               onSubmit={handleSubmit}
               initial={{ opacity: 0, x: 40 }}
