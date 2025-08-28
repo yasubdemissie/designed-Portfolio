@@ -156,7 +156,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-32 transition-all duration-700 overflow-hidden"
+      className="relative py-32 transition-all duration-700 w-full overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating sparkles */}
