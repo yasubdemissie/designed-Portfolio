@@ -22,7 +22,7 @@ export function ShowWork({ title, description, image, link }: Work) {
         </p>
 
         <div className="flex justify-around gap-4">
-          <CaseStudyButton />
+          <CaseStudyButton path={link} />
           <Button
             onClick={() => navigate.push(`${link}`)}
             className="bg-custom-accent-dark hover:bg-custom-accent-dark/80 text-white px-6 py-3 rounded-lg flex items-center gap-2"
