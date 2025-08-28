@@ -50,7 +50,7 @@ export default function CombinedPortfolio() {
         </main>
 
         {/* Bottom Name Section */}
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-center">
+        <div className="flex justify-center items-center mx-auto flex-col transform -translate-x-1/2 text-center">
           <h3 className="text-2xl font-light text-brand-text mb-2">Nahom</h3>
           <p className="text-brand-text/70">Digital Product Designer</p>
         </div>
