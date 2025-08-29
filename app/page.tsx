@@ -12,7 +12,7 @@ import WorkPage from "@/components/work";
 export default function Home() {
   return (
     <ContactContextProvider>
-      <div className="bg-brand-main grid space-y-3 scroll-smooth">
+      <div className="bg-brand-main grid gap-y-3 scroll-smooth">
         <ProgressBar />
         <Header />
         <HomePage />
