@@ -14,6 +14,7 @@ export interface Contact {
 export interface User {
   name: string;
   image: string;
+  image2: string;
   contact: Contact;
   description: string;
   job:
@@ -49,7 +50,8 @@ export const userData: Data[] = [
         location: "Shashemane, Ethiopia",
         website: "nahomdibaba.dev",
       },
-      image: "/assets/image/user/user.jpg",
+      image: "/assets/image/user/user.png",
+      image2: "/assets/image/user/user1.png",
       job: "Digital Product Designer",
     } as User,
     works: [

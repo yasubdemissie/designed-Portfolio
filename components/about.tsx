@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { ContactButton } from "./supporters/contactButton";
 
 export default function AboutPage() {

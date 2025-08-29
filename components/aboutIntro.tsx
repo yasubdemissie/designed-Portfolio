@@ -12,7 +12,7 @@ export default function AboutIntro() {
         <div className="flex-shrink-0">
           <div className="w-80 h-80 rounded-[20%] overflow-hidden bg-black">
             <img
-              src={user.image || "assets/image/user.jpg"}
+              src={user.image2 || "assets/image/user.jpg"}
               alt={user.name || "USER"}
               className="w-full h-full object-cover"
             />

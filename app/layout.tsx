@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${UrbanistFont.className} antialiased bg-accent-dark`}>
+      <body className={`${UrbanistFont.className} antialiased bg-brand-dark`}>
         {/* ${urbanistSans.variable} */}
         {children}
       </body>

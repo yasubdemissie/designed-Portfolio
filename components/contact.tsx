@@ -156,7 +156,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-32 transition-all duration-700 w-full overflow-hidden"
+      className="relative py-32 bg-brand-main transition-all duration-700 w-full overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating sparkles */}
@@ -294,7 +294,7 @@ export default function Contact() {
                           className={`absolute inset-0 ${social.bgColor} opacity-0 group-hover/social:opacity-20 rounded-xl transition-opacity duration-300`}
                         />
                         <social.icon
-                          className={`w-5 h-5 relative z-10 ${social.iconColor} group-hover/social:scale-110 transition-all duration-300`}
+                          className={`w-5 h-5 relativz-10 ${social.iconColor} group-hover/social:scale-110 transition-all duration-300`}
                         />
                       </motion.a>
                     ))}
@@ -352,7 +352,7 @@ export default function Contact() {
                       />
                       {focusedField === field.id && (
                         <motion.div
-                          className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-xl blur-sm"
+                          className="absolute inset-0z-10 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-xl blur-sm"
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.8 }}
@@ -384,7 +384,7 @@ export default function Contact() {
                   />
                   {focusedField === "message" && (
                     <motion.div
-                      className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-xl blur-sm"
+                      className="absolute inset-0 z-10 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-xl blur-sm"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.8 }}

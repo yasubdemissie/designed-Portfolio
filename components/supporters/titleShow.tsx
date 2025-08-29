@@ -11,7 +11,9 @@ export default function TitleShow({ title, className }: TitleShowProps) {
   return (
     <div
       className={clsx(
-        "sticky top-16 md:top-20 mx-5 z-50 bg-brand-main/0 w-fit mb-8",
+        `${
+          title.toLowerCase() == "works" ? "sticky top-20" : ""
+        }  mx-5 z-30 bg-brand-main/0 w-fit mb-8`,
         className
       )}
     >

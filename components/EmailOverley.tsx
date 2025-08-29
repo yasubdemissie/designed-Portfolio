@@ -7,13 +7,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { X, Mail, User, MessageSquare, Send } from "lucide-react";
+import { useContactContext } from "./supporters/context";
 
-interface EmailOverlayProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export function EmailOverlay({ isOpen, onClose }: EmailOverlayProps) {
+export function EmailOverlay() {
+  const { isOverlayOpen: isOpen, setIsOverlayOpen } = useContactContext();
+  function onClose() {
+    setIsOverlayOpen(false);
+  }
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -66,19 +66,15 @@ export function EmailOverlay({ isOpen, onClose }: EmailOverlayProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex bg-brand-main items-center justify-center p-4">
       {/* Backdrop with blur */}
       <div
-        className="absolute inset-0 backdrop-blur-md transition-opacity duration-300"
-        style={{ backgroundColor: "rgba(213, 213, 215, 0.8)" }}
+        className="absolute inset-0 backdrop-blur-md transition-opacity bg-brand-main duration-300"
         onClick={onClose}
       />
 
       {/* Form Container */}
-      <div
-        className="relative w-full max-w-md rounded-2xl shadow-2xl p-8 transform transition-all duration-300 scale-100"
-        style={{ backgroundColor: "#d9d9d9" }}
-      >
+      <div className="relative w-full bg-brand-main max-w-md rounded-2xl shadow-2xl p-8 transform transition-all duration-300 scale-100">
         {/* Close Button */}
         <Button variant={"email"} onClick={onClose}>
           <X className="w-5 h-5 text-gray-600" />
@@ -86,10 +82,7 @@ export function EmailOverlay({ isOpen, onClose }: EmailOverlayProps) {
 
         {/* Header */}
         <div className="text-center mb-8">
-          <div
-            className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center"
-            style={{ backgroundColor: "#37003c" }}
-          >
+          <div className="w-16 h-16 rounded-full bg-custom-accent-dark mx-auto mb-4 flex items-center justify-center">
             <Mail className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
@@ -101,10 +94,7 @@ export function EmailOverlay({ isOpen, onClose }: EmailOverlayProps) {
         {/* Success Message */}
         {isSubmitted && (
           <div className="text-center py-8">
-            <div
-              className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center"
-              style={{ backgroundColor: "#37003c" }}
-            >
+            <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center bg-custom-accent-dark">
               <Send className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">

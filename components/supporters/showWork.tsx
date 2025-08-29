@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ArrowRightToLine } from "lucide-react";
+import { ArrowRight, ArrowRightToLine, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
@@ -25,10 +25,10 @@ export function ShowWork({ title, description, image, link }: Work) {
           <CaseStudyButton path={link} />
           <Button
             onClick={() => navigate.push(`${link}`)}
-            className="bg-custom-accent-dark hover:bg-custom-accent-dark/80 text-white px-6 py-3 rounded-lg flex items-center gap-2"
+            className="bg-custom-accent-dark hover:bg-custom-accent-dark/80 text-white px-6 py-3 rounded-lg flex w-[165px] h-[47px] items-center gap-2"
           >
             Mockup
-            <ArrowRight className="w-4 h-4" />
+            <ArrowUpRight className="w-4 h-4" />
           </Button>
         </div>
       </div>
@@ -47,7 +47,7 @@ export function ShowWork({ title, description, image, link }: Work) {
             className="absolute inset-0 bg-black/50 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-y-1"
           >
             <div className="w-fit p-2 rounded-full my-1 bg-black/40">
-              <ArrowRightToLine color="white" />
+              <ArrowUpRight color="white" />
             </div>
             <h3 className="text-white text-2xl font-medium">See more</h3>
             <p className="text-white text-sm">
