@@ -47,51 +47,51 @@ export default function Services() {
         {/* Services Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-5 h-full relative">
           {/* Web and Mobile App Design */}
-          <div
-            className="bg-custom-accent-dark flex items-center justify-center p-8 cursor-pointer transition-all duration-300"
-            onMouseEnter={() => setHoveredService("web-mobile")}
-          >
-            <h3 className="text-white text-2xl font-light text-center leading-tight">
+          <div className="bg-custom-accent-dark flex items-center justify-center p-8 cursor-pointer transition-all duration-300">
+            <h3
+              onMouseEnter={() => setHoveredService("web-mobile")}
+              className="text-white text-4xl font-semibold text-center leading-tight"
+            >
               Web and Mobile App Design
             </h3>
           </div>
 
           {/* UI/UX Design */}
-          <div
-            onMouseEnter={() => setHoveredService("ui/ux-research")}
-            className="bg-custom-accent-light flex items-center justify-center p-8"
-          >
-            <h3 className="text-white text-2xl font-light text-center leading-tight">
+          <div className="bg-custom-accent-light flex items-center justify-center p-8">
+            <h3
+              onMouseEnter={() => setHoveredService("ui/ux-research")}
+              className="text-white text-4xl tracking-tight font-semibold text-center leading-tight"
+            >
               UI/UX Design
             </h3>
           </div>
 
           {/* UX Research */}
-          <div
-            className="bg-[#4a0052] flex items-center justify-center p-8 cursor-pointer transition-all duration-300"
-            onMouseEnter={() => setHoveredService("ux-research")}
-          >
-            <h3 className="text-white text-2xl font-light text-center leading-tight">
+          <div className="bg-[#4a0052] flex items-center justify-center p-8 cursor-pointer transition-all duration-300">
+            <h3
+              onMouseEnter={() => setHoveredService("ux-research")}
+              className="text-white text-4xl tracking-tight font-semibold text-center leading-tight"
+            >
               UX Research
             </h3>
           </div>
 
           {/* Brand Identity Design */}
-          <div
-            className="bg-[#5c0066] flex items-center justify-center p-8"
-            onMouseEnter={() => setHoveredService("brand-identity-design")}
-          >
-            <h3 className="text-white text-2xl font-light text-center leading-tight">
+          <div className="bg-[#5c0066] flex items-center justify-center p-8">
+            <h3
+              onMouseEnter={() => setHoveredService("brand-identity-design")}
+              className="text-white text-4xl tracking-tight font-semibold text-center leading-tight"
+            >
               Brand Identity Design
             </h3>
           </div>
 
           {/* More+ */}
-          <div
-            className="bg-[#2d0033] flex items-center justify-center p-8"
-            onMouseEnter={() => setHoveredService("more")}
-          >
-            <h3 className="text-white text-2xl font-light text-center leading-tight">
+          <div className="bg-[#2d0033] flex items-center justify-center p-8">
+            <h3
+              onMouseEnter={() => setHoveredService("more")}
+              className="text-white text-4xl tracking-tight font-semibold text-center leading-tight"
+            >
               More+
             </h3>
           </div>

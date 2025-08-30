@@ -46,8 +46,8 @@ export const userData: Data[] = [
         "I'm a UI/UX Designer driven by a genuine passion for solving complex user problems with elegant, intuitive solutions. My approach is rooted in deep user research and data-driven insights, which allows me to craft digital experiences that not only look great but also deliver measurable impact.",
       contact: {
         phone: 993448399,
-        email: "nahom.dibaba@gmail.com",
-        location: "Shashemane, Ethiopia",
+        email: "nahomdibaba7@gmail.com",
+        location: "Hawassa, Ethiopia",
         website: "nahomdibaba.dev",
       },
       image: "/assets/image/user/user.png",

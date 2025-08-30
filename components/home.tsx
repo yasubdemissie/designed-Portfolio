@@ -1,4 +1,8 @@
-import { Linkedin, Send, Instagram } from "lucide-react";
+import {
+  Linkedin,
+  Send,
+  Instagram,
+} from "lucide-react";
 import { ContactButton } from "./supporters/contactButton";
 import { userData } from "@/data/db";
 
@@ -8,15 +12,12 @@ export default function CombinedPortfolio() {
   return (
     <div className="bg-brand-main">
       {/* Home Section */}
-      <section
-        id="home"
-        className="min-h-screen relative overflow-hidden pt-20"
-      >
+      <section id="home" className="min-h-screen relative overflow-clip pt-20">
         {/* Main Content */}
-        <main className="flex flex-col items-center justify-between px-8 py-16 relative md:flex-row">
+        <main className="flex flex-col items-start justify-between px-4 py-16 relative md:flex-row">
           {/* Center Profile Image - first on mobile */}
-          <div className="flex-shrink-0 mb-8 md:mb-0 md:mx-16 order-1 md:order-2">
-            <div className="w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden bg-black">
+          <div className="flex-shrink-0 mx-10 mb-8 md:mb-0 md:mx-16 order-1 md:order-2">
+            <div className="w-70 h-70 md:w-90 md:h-90 rounded-full overflow-hidden bg-black">
               <img
                 src={user.image || "/assets/image/user/user.png"}
                 alt={user.name || "USER"}
@@ -26,7 +27,7 @@ export default function CombinedPortfolio() {
           </div>
 
           {/* Left Content - comes second on mobile */}
-          <div className="flex-1 max-w-md order-2 md:order-1">
+          <div className="flex-1 order-2 md:order-1">
             <div className="flex items-center gap-2 mb-8">
               <div className="w-2 h-2 bg-custom-accent-dark rounded-full"></div>
               <span className="text-brand-text/70 text-sm">
@@ -34,17 +35,17 @@ export default function CombinedPortfolio() {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-medium text-brand-text leading-tight mb-6">
+            <h2 className="text-4xl mt-10 md:text-5xl font-medium text-brand-text leading-tight mb-1">
               Designing Beautiful UI and Interesting UX
             </h2>
 
-            <p className="text-brand-text/70 text-md mb-8">
+            <p className="text-brand-text/70 text-md mb-16">
               I create seamless digital experience that users love.
             </p>
           </div>
 
           {/* Right Content - last on mobile */}
-          <div className="flex-1 flex justify-center mt-6 md:mt-auto mr-0 md:mr-10 order-3">
+          <div className="flex-1 flex justify-start ml-0 mt-6 md:mt-auto mr-0 md:mr-10 order-3">
             <ContactButton />
           </div>
         </main>
@@ -56,15 +57,21 @@ export default function CombinedPortfolio() {
         </div>
 
         {/* Right Side Email and Social */}
-        <div className="absolute right-3 top-[300px] md:right-8 md:top-1/2 transform -translate-y-1/2 flex flex-col items-center gap-8">
+        <div className="absolute right-3 top-[250px] md:right-8 md:top-1/3 transform -translate-y-1/2 flex flex-col items-center justify-center gap-1">
           <div
-            className="writing-mode-vertical text-brand-text/70 text-sm tracking-wider"
+            className="writing-mode-vertical text-brand-text/70 flex flex-col text-sm tracking-wider mb-10"
             style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
           >
-            {user.contact.email}
+            <span>{user.contact.email}</span>
           </div>
 
           <div className="flex flex-col gap-4">
+            {/* <div className="">
+              <span className="border"></span>
+              <span></span>
+              <span></span>
+            </div> */}
+
             <a
               href="#"
               className="text-brand-text/70 hover:text-brand-text transition-colors"

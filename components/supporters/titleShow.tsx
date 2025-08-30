@@ -6,14 +6,17 @@ interface TitleShowProps {
 }
 
 export default function TitleShow({ title, className }: TitleShowProps) {
-  const titleArray = title.split("");
+  const titleArray = title
+    .toLowerCase()
+    .split("")
+    .map((char, i) => (i == 0 ? char.toUpperCase() : char));
 
   return (
     <div
       className={clsx(
         `${
-          title.toLowerCase() == "works" ? "sticky top-20" : ""
-        }  mx-5 z-30 bg-brand-main/0 w-fit mb-8`,
+          title.toLowerCase() == "works" ? "sticky top-20" : "sticky top-20"
+        } mx-1 z-30 bg-brand-main/0 w-fit mb-8`,
         className
       )}
     >

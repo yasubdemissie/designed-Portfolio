@@ -72,7 +72,7 @@ const Data = [
   {
     icon: Clock,
     label: "Availability",
-    value: "Open to freelance & full-time · Responds within 24 hours",
+    value: "Open to freelance, remote & full-time · Responds within 24 hours",
     bgColor: "bg-amber-100 dark:bg-amber-900/30",
     iconColor: "text-amber-600 dark:text-amber-400",
   },

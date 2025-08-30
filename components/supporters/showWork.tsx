@@ -13,15 +13,18 @@ export function ShowWork({ title, description, image, link }: Work) {
     <div className="flex flex-col md:flex-row h-[406] md:h-fit items-center gap-2 md:gap-16 my-20">
       {/* Left Content */}
       <div className="flex-1 max-w-lg order-2 md:order-1">
-        <h2 className="text-[20px] md:text-4xl font-semibold text-gray-900 mb-2 md:mb-6">
+        <h2 className="text-[20px] md:text-4xl font-semibold text-gray-900 mx-2 mb-2 tracking-[-1px] md:mb-6">
           {title}
         </h2>
 
-        <p className="text-gray-600 md:text-lg text-[12px] leading-relaxed mb-2 md:mb-8">
+        <p
+          className="md:text-lg text-[12px] leading-relaxed mb-2 mx-2 md:mb-[80px]"
+          style={{ color: "#868686" }}
+        >
           {description}
         </p>
 
-        <div className="flex justify-around gap-4">
+        <div className="flex justify-start gap-4">
           <CaseStudyButton path={link} />
           <Button
             onClick={() => navigate.push(`${link}`)}

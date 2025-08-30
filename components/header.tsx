@@ -65,9 +65,9 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-1 left-0 right-0 w-full mx-4 sm:w-5/6 md:w-4/5 lg:w-2/3 rounded-2xl sm:rounded-3xl lg:rounded-4xl sm:mx-auto bg-brand-second z-40">
+    <header className="fixed top-1 mx-auto sm:left-0 sm:right-0 w-full sm:w-5/6 md:w-4/5 lg:w-2/3 rounded-4xl border sm:mx-auto bg-brand-second z-40">
       <div className="flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6">
-        <h1 className="text-lg sm:text-xl text-brand-text font-bold">
+        <h1 className="text-[12px] md:text-[20px] text-brand-text font-bold">
           Nahom Dibaba
         </h1>
 

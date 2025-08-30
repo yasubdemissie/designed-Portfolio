@@ -10,15 +10,6 @@ export default function WorkPage() {
       <TitleShow title="WORKS" />
       {/* Main Content */}
       <main className="px-2 md:px-8 py-16">
-        {/* WORKS Title */}
-
-        {/* Some Design Works */}
-        <div className="text-right mb-8">
-          <p className="text-gray-600 text-sm md:text-md lg:text-lg">
-            Some Design Works
-          </p>
-        </div>
-
         {/* Project Showcase */}
         {works.map((work) => (
           <ShowWork
