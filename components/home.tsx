@@ -1,8 +1,4 @@
-import {
-  Linkedin,
-  Send,
-  Instagram,
-} from "lucide-react";
+import { Linkedin, Send, Instagram } from "lucide-react";
 import { ContactButton } from "./supporters/contactButton";
 import { userData } from "@/data/db";
 
@@ -59,18 +55,23 @@ export default function CombinedPortfolio() {
         {/* Right Side Email and Social */}
         <div className="absolute right-3 top-[250px] md:right-8 md:top-1/3 transform -translate-y-1/2 flex flex-col items-center justify-center gap-1">
           <div
-            className="writing-mode-vertical text-brand-text/70 flex flex-col text-sm tracking-wider mb-10"
+            className="writing-mode-vertical text-brand-text/70 flex flex-col text-sm tracking-wider mb-1 mt-40"
             style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
           >
             <span>{user.contact.email}</span>
           </div>
 
           <div className="flex flex-col gap-4">
-            {/* <div className="">
-              <span className="border"></span>
-              <span></span>
-              <span></span>
-            </div> */}
+            <div className="flex flex-col items-center mb-10">
+              {/* Shaft */}
+              <span className="w-[1px] h-24 bg-gray-800/40"></span>
+
+              {/* Open arrow head */}
+              <div className="flex -mt-3">
+                <span className="w-3 h-3 border-b-2 border-l-2 border-gray-800/40 rotate-[-45deg]"></span>
+                {/* <span className="w-3 h-3 border-b-2 border-r-2 border-gray-800 rotate-[45deg] -ml-px"></span> */}
+              </div>
+            </div>
 
             <a
               href="#"

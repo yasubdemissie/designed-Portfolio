@@ -10,21 +10,24 @@ export function CaseStudy({ slug }: { slug: string }) {
   const image = work.caseStudy;
   return (
     <div className="flex flex-col bg-brand-main m-1">
-      <div className="w-fit pl-3 fixed top-4 flex justify-around h-16 bg-brand-second">
+      <div className="w-fit ml-3 fixed z-10 top-4 flex justify-around h-fit bg-brand-second rounded-full">
         <BackButton />
       </div>
-      <div className="w-full relative top-5 h-fit flex flex-col justify-center items-center gap-y-0 my-10">
+      <div className="w-full h-[1200px] md:h-[3000px] relative top-1 flex flex-col justify-center items-center gap-y-0 mb-10">
         <Image
           src={image[0] || "/assets/image/placeholder.svg"}
           alt="Case Study"
-          width={700}
-          height={400}
+          fill
+          className=" object-cover"
+          // width={900}
+          // height={400}
         />
         <Image
           src={image[1] || "/assets/image/placeholder.svg"}
           alt="Case Study"
-          width={700}
-          height={400}
+          fill
+          // width={900}
+          // height={400}
         />
       </div>
     </div>

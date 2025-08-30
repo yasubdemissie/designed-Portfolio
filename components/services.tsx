@@ -1,6 +1,7 @@
 "use client";
 
 import TitleShow from "@/components/supporters/titleShow";
+import { ArrowRight, ChevronDown, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Services() {
@@ -47,53 +48,58 @@ export default function Services() {
         {/* Services Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-5 h-full relative">
           {/* Web and Mobile App Design */}
-          <div className="bg-custom-accent-dark flex items-center justify-center p-8 cursor-pointer transition-all duration-300">
+          <div className="bg-custom-accent-dark flex items-center justify-between md:justify-center p-3 md:p-8 cursor-pointer transition-all duration-300">
             <h3
               onMouseEnter={() => setHoveredService("web-mobile")}
-              className="text-white text-4xl font-semibold text-center leading-tight"
+              className="text-white text-xl md:text-4xl tracking-tight font-medium md:font-semibold text-left md:text-center leading-tight"
             >
               Web and Mobile App Design
             </h3>
+            <ChevronDown className="md:hidden block w-6 h-6 text-white ml-4" />
           </div>
 
           {/* UI/UX Design */}
-          <div className="bg-custom-accent-light flex items-center justify-center p-8">
+          <div className="bg-custom-accent-light flex items-center justify-between md:justify-center p-3 md:p-8">
             <h3
               onMouseEnter={() => setHoveredService("ui/ux-research")}
-              className="text-white text-4xl tracking-tight font-semibold text-center leading-tight"
+              className="text-white text-xl md:text-4xl tracking-tight font-medium md:font-semibold text-left md:text-center leading-tight"
             >
               UI/UX Design
             </h3>
+            <ChevronDown className="md:hidden block w-6 h-6 text-white ml-4" />
           </div>
 
           {/* UX Research */}
-          <div className="bg-[#4a0052] flex items-center justify-center p-8 cursor-pointer transition-all duration-300">
+          <div className="bg-[#4a0052] flex items-center justify-between md:justify-center p-3 md:p-8 cursor-pointer transition-all duration-300">
             <h3
               onMouseEnter={() => setHoveredService("ux-research")}
-              className="text-white text-4xl tracking-tight font-semibold text-center leading-tight"
+              className="text-white text-xl md:text-4xl tracking-tight font-medium md:font-semibold text-left md:text-center leading-tight"
             >
               UX Research
             </h3>
+            <ChevronDown className="md:hidden block w-6 h-6 text-white ml-4" />
           </div>
 
           {/* Brand Identity Design */}
-          <div className="bg-[#5c0066] flex items-center justify-center p-8">
+          <div className="bg-[#5c0066] flex items-center justify-between md:justify-center p-3 md:p-8">
             <h3
               onMouseEnter={() => setHoveredService("brand-identity-design")}
-              className="text-white text-4xl tracking-tight font-semibold text-center leading-tight"
+              className="text-white text-xl md:text-4xl tracking-tight font-medium md:font-semibold text-left md:text-center leading-tight"
             >
               Brand Identity Design
             </h3>
+            <ChevronDown className="md:hidden block w-6 h-6 text-white ml-4" />
           </div>
 
           {/* More+ */}
-          <div className="bg-[#2d0033] flex items-center justify-center p-8">
+          <div className="bg-[#2d0033] flex items-center justify-between md:justify-center p-3 md:p-8">
             <h3
               onMouseEnter={() => setHoveredService("more")}
-              className="text-white text-4xl tracking-tight font-semibold text-center leading-tight"
+              className="text-white text-xl md:text-4xl tracking-tight font-medium md:font-semibold text-left md:text-center leading-tight"
             >
               More+
             </h3>
+            <ChevronDown className="md:hidden block w-6 h-6 text-white ml-4" />
           </div>
 
           {hoveredService && (

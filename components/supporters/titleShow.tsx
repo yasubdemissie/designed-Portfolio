@@ -46,7 +46,9 @@ export default function TitleShow({ title, className }: TitleShowProps) {
         )}
 
         {title.toUpperCase() === "ABOUT" && (
-          <span className="text-custom-accent-dark flex pl-3 gap-x-3">ME</span>
+          <span className="text-custom-accent-dark flex justify-baseline items-baseline pt-3 pl-1 gap-x-2">
+            Me
+          </span>
         )}
       </div>
     </div>

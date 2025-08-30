@@ -313,7 +313,7 @@ export default function Contact() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6 px-4">
                 {[
                   {
                     id: "name",
