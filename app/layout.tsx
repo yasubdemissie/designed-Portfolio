@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
+import ContactContextProvider from "@/components/supporters/context";
+import { EmailOverlay } from "@/components/EmailOverley";
 
 // const urbanistSans = Urbanist({
 //   variable: "--font-geist-sans",
@@ -26,7 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${UrbanistFont.className} antialiased bg-brand-dark`}>
-        {children}
+        <ContactContextProvider>
+          {children}
+          <EmailOverlay />
+        </ContactContextProvider>
       </body>
     </html>
   );

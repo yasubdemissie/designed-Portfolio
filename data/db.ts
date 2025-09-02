@@ -83,7 +83,7 @@ export const userData: Data[] = [
         ],
       } as Work,
       {
-        title: "Addis Ababa University App",
+        title: "Adama Science and Technology University",
         description:
           "Designed a responsive dashboard for a social media platform, focusing on user engagement and analytics. Implemented features like real-time notifications and user activity tracking.",
         image: "/assets/image/ASTU/ASTU.png",
