@@ -48,7 +48,7 @@ export const userData: Data[] = [
         phone: 993448399,
         email: "nahomdibaba7@gmail.com",
         location: "Hawassa, Ethiopia",
-        website: "nahomdibaba.dev",
+        website: "https://designed-portfolio-4zk5.vercel.app/",
       },
       image: "/assets/image/user/user.png",
       image2: "/assets/image/user/user1.png",

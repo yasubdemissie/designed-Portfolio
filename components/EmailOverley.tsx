@@ -66,10 +66,10 @@ export function EmailOverlay() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex bg-brand-main items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center bg-brand-main/80 justify-center p-4">
       {/* Backdrop with blur */}
       <div
-        className="absolute inset-0 backdrop-blur-md transition-opacity bg-brand-main duration-300"
+        className="absolute inset-0 backdrop-blur-md transition-opacity bg-brand-main/80 duration-300"
         onClick={onClose}
       />
 

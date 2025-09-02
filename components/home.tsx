@@ -31,7 +31,7 @@ export default function CombinedPortfolio() {
               </span>
             </div>
 
-            <h2 className="text-4xl mt-10 md:text-5xl font-medium text-brand-text leading-tight mb-1">
+            <h2 className="text-4xl mt-10 md:mt-14 md:text-5xl font-medium text-brand-text leading-tight mb-1">
               Designing Beautiful UI and Interesting UX
             </h2>
 
